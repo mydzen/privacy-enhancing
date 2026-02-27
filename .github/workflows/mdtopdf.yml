@@ -17,7 +17,7 @@ jobs:
       # run pandoc to generate word doc from markdown
       - name: run pandoc
         run: |
-          pandoc -f markdown -t docx -o "gh-actions-pandoc-readme.docx" --toc "./README.md" 
+          pandoc -f markdown -t docx -o "gh-actions-pandoc-readme.docx" --toc README.md testfile.md
 
       # output generated file to build artifacts
       - uses: actions/upload-artifact@v4
